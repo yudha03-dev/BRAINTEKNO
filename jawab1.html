@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jawaban Benar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Montserrat:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #e3f2fd, #ffffff);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      color: #333;
+    }
+
+    .jawab {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #28a745;
+      margin-bottom: 30px;
+      animation: pop 0.8s ease-in-out;
+    }
+
+    @keyframes pop {
+      0% {
+        transform: scale(0.6);
+        opacity: 0;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .checkmark {
+      position: relative;
+      width: 180px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+
+    .checkmark span {
+      position: absolute;
+      font-size: 32px;
+      --rotate: 0deg;
+      --tx: 0px;
+      --ty: -60px;
+      transform: rotate(var(--rotate)) translate(var(--tx), var(--ty));
+      animation: bounceSmooth 1.6s ease-in-out infinite;
+    }
+
+    .checkmark span:nth-child(1) {
+      top: 60px;
+      left: 0;
+      --rotate: -30deg;
+    }
+
+    .checkmark span:nth-child(2) {
+      top: 40px;
+      left: 35px;
+      --rotate: -15deg;
+    }
+
+    .checkmark span:nth-child(3) {
+      top: 30px;
+      left: 75px;
+      --rotate: 0deg;
+    }
+
+    .checkmark span:nth-child(4) {
+      top: 40px;
+      left: 115px;
+      --rotate: 15deg;
+    }
+
+    .checkmark span:nth-child(5) {
+      top: 60px;
+      left: 150px;
+      --rotate: 30deg;
+    }
+
+    @keyframes bounceSmooth {
+
+      0%,
+      100% {
+        transform: rotate(var(--rotate)) translate(var(--tx), var(--ty));
+      }
+
+      50% {
+        transform: rotate(var(--rotate)) translate(var(--tx), calc(var(--ty) - 10px));
+      }
+    }
+
+    .home a {
+      font-size: 18px;
+      font-weight: 500;
+      background: #007bff;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .home a:hover {
+      background: #0056b3;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 480px) {
+      .jawab {
+        font-size: 2.2rem;
+      }
+
+      .checkmark {
+        width: 140px;
+        height: 80px;
+      }
+
+      .checkmark span {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="checkmark">
+    <span>😍</span>
+    <span>😍</span>
+    <span>😍</span>
+    <span>😍</span>
+    <span>😍</span>
+  </div>
+  <h1 class="jawab">Jawaban Benar!</h1>
+  <section class="home">
+    <a href="index.html">SELESAI</a>
+  </section>
+</body>
+
+</html>
